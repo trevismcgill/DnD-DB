@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  index: MyString
+  name: MyString
+  desc: MyText
+  higher_level: MyText
+  range: MyString
+  components: 
+  material: MyString
+  ritual: false
+  duration: MyString
+  concentration: false
+  casting_time: MyString
+  level: 1
+  attack_type: MyString
+  damage: 
+  school: 
+  classes: 
+  subclasses: 
+  url: MyString
+
+two:
+  index: MyString
+  name: MyString
+  desc: MyText
+  higher_level: MyText
+  range: MyString
+  components: 
+  material: MyString
+  ritual: false
+  duration: MyString
+  concentration: false
+  casting_time: MyString
+  level: 1
+  attack_type: MyString
+  damage: 
+  school: 
+  classes: 
+  subclasses: 
+  url: MyString

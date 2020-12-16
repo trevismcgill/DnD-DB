@@ -3,8 +3,8 @@ class CreateSpells < ActiveRecord::Migration[6.0]
     create_table :spells do |t|
       t.string :index
       t.string :name
-      t.text :desc
-      t.text :higher_level
+      t.json :desc
+      t.json :higher_level
       t.string :range
       t.json :components
       t.string :material

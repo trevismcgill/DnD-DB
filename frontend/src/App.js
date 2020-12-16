@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; 
+import NavBar from './components/NavBar'
+import Home from './components/Home'
+import CharacterIndex from './containers/CharacterIndex'
+import CharacterForm from './components/CharacterForm'
+import CharacterKlassIndex from './containers/CharacterKlassIndex'
+import CharacterKlass from './components/CharacterKlass'
+import RaceIndex from './containers/RaceIndex'
+import Race from './components/Race'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/characters" component={CharacterIndex} />
+          <Route path="/characters/new" component={CharacterForm} />
+          <Route exact path="/classes" component={CharacterKlassIndex} />
+          <Route exact path={`/classes/wizard`} component={CharacterKlass} />
+          <Route exact path="/races" component={RaceIndex} />
+          <Route exact path={`/races/elf`} component={Race} />
+        </Switch>
+      </Router>
     </div>
   );
 }

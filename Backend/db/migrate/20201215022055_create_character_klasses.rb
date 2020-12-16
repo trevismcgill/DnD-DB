@@ -10,7 +10,7 @@ class CreateCharacterKlasses < ActiveRecord::Migration[6.0]
       t.string :starting_equipment
       t.string :class_levels
       t.json :subclasses
-      t.text :spellcasting
+      t.json :spellcasting
       t.string :spells
       t.string :url
 

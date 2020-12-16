@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_15_192610) do
+ActiveRecord::Schema.define(version: 2020_12_15_194529) do
 
   create_table "character_klasses", force: :cascade do |t|
     t.string "index"
@@ -22,9 +22,19 @@ ActiveRecord::Schema.define(version: 2020_12_15_192610) do
     t.string "starting_equipment"
     t.string "class_levels"
     t.json "subclasses"
-    t.text "spellcasting"
+    t.json "spellcasting"
     t.string "spells"
     t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.string "alignment"
+    t.integer "height"
+    t.integer "weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -55,8 +65,8 @@ ActiveRecord::Schema.define(version: 2020_12_15_192610) do
   create_table "spells", force: :cascade do |t|
     t.string "index"
     t.string "name"
-    t.text "desc"
-    t.text "higher_level"
+    t.json "desc"
+    t.json "higher_level"
     t.string "range"
     t.json "components"
     t.string "material"

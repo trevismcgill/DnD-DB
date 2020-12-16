@@ -21,32 +21,36 @@
 #     end
 # end
 
-# def create_spell_models
-#     base_url = "http://www.dnd5eapi.co"
-#     response = RestClient.get("#{base_url}/api/spells")
-#     spells_hash = JSON.parse(response.body, symbolize_names:true)
-#     spells_array = spells_hash[:results]
+def create_spell_models
+    base_url = "http://www.dnd5eapi.co"
+    response = RestClient.get("#{base_url}/api/spells")
+    spells_hash = JSON.parse(response.body, symbolize_names:true)
+    spells_array = spells_hash[:results]
     
-#     spells_array.collect do |spell|
-#       response = RestClient.get("#{base_url}#{spell[:url]}")
-#       individual_spell_hash = JSON.parse(response.body, symbolize_names:true)
-#       Spell.create!(individual_spell_hash)
-#     end
-# end
+    spells_array.collect do |spell|
+      response = RestClient.get("#{base_url}#{spell[:url]}")
+      individual_spell_hash = JSON.parse(response.body, symbolize_names:true)
+      Spell.create!(individual_spell_hash)
+    end
+end
 
-# def create_race_models
-#     base_url = "http://www.dnd5eapi.co"
-#     response = RestClient.get("#{base_url}/api/races")
-#     dnd_races_hash = JSON.parse(response.body, symbolize_names:true)
-#     dnd_races_array = dnd_races_hash[:results]
+def create_race_models
+    base_url = "http://www.dnd5eapi.co"
+    response = RestClient.get("#{base_url}/api/races")
+    dnd_races_hash = JSON.parse(response.body, symbolize_names:true)
+    dnd_races_array = dnd_races_hash[:results]
     
-#     dnd_races_array.collect do |race|
-#         response = RestClient.get("#{base_url}#{race[:url]}")
-#         dnd_race_specific_hash = JSON.parse(response.body, symbolize_names:true)
-#         Race.create!(dnd_race_specific_hash)
-#     end
-# end
+    dnd_races_array.collect do |race|
+        response = RestClient.get("#{base_url}#{race[:url]}")
+        dnd_race_specific_hash = JSON.parse(response.body, symbolize_names:true)
+        Race.create!(dnd_race_specific_hash)
+    end
+end
 
 # create_characterklass_models
-# create_spell_models
-# create_race_models
+create_spell_models
+create_race_models
+
+# This is how to wrap something in an Array
+ # klass_hash_fixed_spellcasting = Array.wrap(dnd_klass_specific_hash[:spellcasting])
+        # dnd_klass_specific_hash[:spellcasting] = klass_hash_fixed_spellcasting

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function CharacterKlass() {
+export default function CharacterKlass({klass}) {
     return (
         <div>
-            <h1>Character Class</h1>
+            {klass.name}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 export default function raceReducer(state = { all: [] }, action) {
 	switch (action.type) {
-		case "FETCH-RACES":
+		case "FETCH_RACES":
 			return { ...state, races: action.payload };
 		// case
 		//     return

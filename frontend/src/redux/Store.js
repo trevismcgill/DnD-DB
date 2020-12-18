@@ -1,18 +1,22 @@
-import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
-import characterReducer from './reducers/characterReducer'
-import klassReducer from './reducers/klassReducer'
-import thunk from 'redux-thunk'
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import characterReducer from "./reducers/characterReducer";
+import klassesReducer from "./reducers/klassReducer";
+import raceReducer from "./reducers/raceReducer";
+import spellReducer from "./reducers/raceReducer";
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    characters: characterReducer,
-    klasses: klassReducer,
-})
+	characters: characterReducer,
+	klasses: klassesReducer,
+	races: raceReducer,
+	spells: spellReducer,
+});
 
 const store = createStore(
-    rootReducer,
-    composeEnhancers(applyMiddleware(thunk))
-)
+	rootReducer,
+	composeEnhancers(applyMiddleware(thunk))
+);
 
-export default store
+export default store;

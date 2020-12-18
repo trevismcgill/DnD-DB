@@ -1,8 +1,6 @@
 import React from "react";
-// import { connect } from "react-redux";
 
 export default function spellCastingInfo({ klass }) {
-	debugger;
 	return (
 		<div>
 			<h2>Spellcasting:</h2>
@@ -22,7 +20,3 @@ export default function spellCastingInfo({ klass }) {
 		</div>
 	);
 }
-
-// const mapStateToProps = () => {};
-
-// export default connect(mapStateToProps)(spellCastingInfo);

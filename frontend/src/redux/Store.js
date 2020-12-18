@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 import characterReducer from "./reducers/characterReducer";
 import klassesReducer from "./reducers/klassReducer";
 import raceReducer from "./reducers/raceReducer";
-import spellReducer from "./reducers/raceReducer";
+import spellReducer from "./reducers/spellReducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

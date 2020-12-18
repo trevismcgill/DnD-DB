@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getKlasses } from "../redux/actions/seedStore";
 import { Link } from "react-router-dom";
-// import CharacterKlass from "../components/CharacterKlass";
 class CharacterKlassIndex extends Component {
-	componentDidMount() {
-		this.props.getKlasses();
-	}
-
 	render() {
 		return (
 			<div>
@@ -30,4 +24,4 @@ const mapStateToProps = ({ klasses }) => {
 	};
 };
 
-export default connect(mapStateToProps, { getKlasses })(CharacterKlassIndex);
+export default connect(mapStateToProps)(CharacterKlassIndex);

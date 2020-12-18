@@ -21,7 +21,7 @@
 #     end
 # end
 
-#----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 
 # def create_spell_models
 #     base_url = "http://www.dnd5eapi.co"
@@ -36,7 +36,7 @@
 #     end
 # end
 
-#----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 
 # def create_race_models
 #     base_url = "http://www.dnd5eapi.co"
@@ -51,14 +51,14 @@
 #     end
 # end
 
-#----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 
 # # create_characterklass_models
 # create_spell_models
 # create_race_models
 
-#----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 
 # This is how to wrap something in an Array
- # klass_hash_fixed_spellcasting = Array.wrap(dnd_klass_specific_hash[:spellcasting])
-        # dnd_klass_specific_hash[:spellcasting] = klass_hash_fixed_spellcasting
+#  klass_hash_fixed_spellcasting = Array.wrap(dnd_klass_specific_hash[:spellcasting])
+#         dnd_klass_specific_hash[:spellcasting] = klass_hash_fixed_spellcasting

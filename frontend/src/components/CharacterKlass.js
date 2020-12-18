@@ -1,13 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import spellCastingInfo from "./spellCastingInfo";
+import SpellCastingInfo from "./spellCastingInfo";
 
 function CharacterKlass({ klass }) {
-	// const hasSpellCasting = klass.spellcasting;
-	// if (hasSpellCasting !== null) {
-	// 	<spellCastingInfo />;
-	// }
-
 	return (
 		<div>
 			<h1>{klass.name}</h1>
@@ -24,25 +19,7 @@ function CharacterKlass({ klass }) {
 			{klass.subclasses.map((sub) => {
 				return <ul>{sub.name}</ul>;
 			})}
-
-			{/* {
-            klass.spellcasting !== null &&  */}
-			<spellCastingInfo klass={klass} />
-
-			{/* <h2>Spellcasting:</h2>
-
-			<p>{klass.spellcasting.spellcasting_ability.name}</p>
-
-			{klass.spellcasting.info.map(({ name, desc }) => {
-				return (
-					<React.Fragment>
-						<h5>{name}:</h5>
-						{desc.map((text) => (
-							<p>{text}</p>
-						))}
-					</React.Fragment>
-				);
-			})} */}
+			{klass.spellcasting ? <SpellCastingInfo klass={klass} /> : null}
 		</div>
 	);
 }

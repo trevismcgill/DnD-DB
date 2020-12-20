@@ -8,7 +8,7 @@ function SpellIndex({ spells }) {
 			<h1>Spells</h1>
 			{spells.map((spell) => (
 				<ul>
-					<Link to={`/spells/${spell.name.toLowerCase()}`}>{spell.name}</Link>
+					<Link to={`/spells/${spell.index.toLowerCase()}`}>{spell.name}</Link>
 				</ul>
 			))}
 		</div>

@@ -15,23 +15,21 @@ class SpellIndex extends React.Component {
 		byAll: true,
 	};
 
-	toggleView = (state) => {
-		console.log(state.bySchool);
-		switch (state) {
-			case state.bySchool:
-				console.log("IN SCHOOL");
+	toggleView = () => {
+		switch (true) {
+			case this.state.bySchool:
 				return (
 					<div>
 						<BySchoolSpells spells={this.props.spells} />
 					</div>
 				);
-			case state.byLevel:
+			case this.state.byLevel:
 				return (
 					<div>
 						<ByLevelSpells />
 					</div>
 				);
-			case state.byKlass:
+			case this.state.byKlass:
 				return (
 					<div>
 						<ByKlassSpells />
@@ -49,7 +47,6 @@ class SpellIndex extends React.Component {
 	handleClick = (event) => {
 		switch (event.target.name) {
 			case "bySchoolButton":
-				console.log("YOU CLICKED SCHOOL");
 				this.setState({
 					bySchool: true,
 					byLevel: false,
@@ -96,7 +93,7 @@ class SpellIndex extends React.Component {
 				<button name="byKlassButton" onClick={this.handleClick}>
 					By Level
 				</button>
-				{this.toggleView(this.state)}
+				{this.toggleView()}
 			</div>
 		);
 	}

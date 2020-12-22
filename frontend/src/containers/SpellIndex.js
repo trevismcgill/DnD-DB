@@ -26,13 +26,13 @@ class SpellIndex extends React.Component {
 			case this.state.byLevel:
 				return (
 					<div>
-						<ByLevelSpells />
+						<ByLevelSpells spells={this.props.spells} />
 					</div>
 				);
 			case this.state.byKlass:
 				return (
 					<div>
-						<ByKlassSpells />
+						<ByKlassSpells spells={this.props.spells} />
 					</div>
 				);
 			default:
@@ -83,15 +83,18 @@ class SpellIndex extends React.Component {
 	render() {
 		return (
 			<div>
-				Spells
+				Filter:
+				<button name="byAllButton" onClick={this.handleClick}>
+					All
+				</button>
 				<button name="bySchoolButton" onClick={this.handleClick}>
-					By School
+					School
 				</button>
 				<button name="byLevelButton" onClick={this.handleClick}>
-					By Level
+					Level
 				</button>
 				<button name="byKlassButton" onClick={this.handleClick}>
-					By Level
+					Class
 				</button>
 				{this.toggleView()}
 			</div>

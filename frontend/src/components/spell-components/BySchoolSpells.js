@@ -1,22 +1,20 @@
 import React from "react";
 import SpellCard from "./SpellCard";
+import { Container, Row } from "react-bootstrap";
 
 export default function BySchoolSpells({ spells }) {
 	let schools = spells.map((spell) => spell.school.name);
 	let uniqueSchools = [...new Set(schools)];
-	console.log(uniqueSchools);
+	uniqueSchools.sort();
 	return (
 		<div>
-			{uniqueSchools.map((school) => {
-				return <SpellCard title={school} />;
-			})}
+			<Container>
+				<Row md={4}>
+					{uniqueSchools.map((school) => {
+						return <SpellCard title={school} />;
+					})}
+				</Row>
+			</Container>
 		</div>
-
-		// <SpellList>
-		// 	spells=
-		// 	{spells.filter((spell) => {
-		// 		spell.school.index === FILTERPARAM;
-		// 	})}
-		// </SpellList>
 	);
 }

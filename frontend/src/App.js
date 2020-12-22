@@ -18,6 +18,7 @@ import RaceIndex from "./containers/RaceIndex";
 import Race from "./components/Race";
 import SpellIndex from "./containers/SpellIndex";
 import Spell from "./components/Spell";
+// import SpellList from "./components/spell-components/SpellList";
 
 class App extends Component {
 	componentDidMount() {
@@ -41,6 +42,7 @@ class App extends Component {
 						<Route exact path="/races/:id" component={Race} />
 						<Route exact path="/spells" component={SpellIndex} />
 						<Route exact path="/spells/:id" component={Spell} />
+						{/* <Route exact path="/spells/school/:id" component={SpellList} /> */}
 					</Switch>
 				</Router>
 			</div>

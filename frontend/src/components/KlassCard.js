@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 
 export default function KlassCard({ klass }) {
 	const imageURL = require(`../../public/assets/imgs/character-class-imgs/${klass.name}.png`);

@@ -83,6 +83,7 @@ class SpellIndex extends React.Component {
 	render() {
 		return (
 			<div>
+				<h1>Spells</h1>
 				Filter:
 				<button name="byAllButton" onClick={this.handleClick}>
 					All

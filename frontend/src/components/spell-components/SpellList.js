@@ -6,7 +6,6 @@ function SpellList({ spells }) {
 	// console.log("Hello");
 	return (
 		<div>
-			<h1>Spells</h1>
 			{spells.map((spell) => (
 				<Container>
 					<Row>

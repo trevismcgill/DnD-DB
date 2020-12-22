@@ -2,18 +2,19 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
+import RaceCard from "../components/RaceCard";
 
 function RaceIndex({ races }) {
 	return (
 		<div>
 			<h1>Races</h1>
-			{races.map((race) => (
-				<Container>
-					<Row>
-						<Link to={`/races/${race.name.toLowerCase()}`}>{race.name}</Link>
-					</Row>
-				</Container>
-			))}
+			<Container>
+				<Row md={4}>
+					{races.map((race) => (
+						<RaceCard race={race} />
+					))}
+				</Row>
+			</Container>
 		</div>
 	);
 }

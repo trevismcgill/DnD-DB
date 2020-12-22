@@ -1,9 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Image } from "react-bootstrap";
 
 function Race({ race }) {
+	const imageURL = require(`../../public/assets/imgs/race-imgs/${race.name}.png`);
 	return (
 		<div>
+			<Image src={imageURL.default} />
 			<h1>{race.name}</h1>
 			<h2>Size: {race.size}</h2>
 

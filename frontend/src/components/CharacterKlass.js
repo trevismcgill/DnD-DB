@@ -1,10 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import SpellCastingInfo from "./spellCastingInfo";
+import { Image } from "react-bootstrap";
 
 function CharacterKlass({ klass }) {
+	const imageURL = require(`../../public/assets/imgs/character-class-imgs/${klass.name}.png`);
 	return (
 		<div>
+			<Image src={imageURL.default} />
 			<h1>{klass.name}</h1>
 			<h2>Hit Die: {klass.hit_die}</h2>
 			<h2>Proficiencies:</h2>

@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import SpellList from "./SpellList";
-import logo from "../../assets";
 
 function SpellCard({ title, spells }) {
 	const klassPresent = (element) => element.name === title;
@@ -20,8 +19,7 @@ function SpellCard({ title, spells }) {
 		const klassExists = spell.classes.some(klassPresent);
 
 		if (title === spell.school.name) {
-			// imageURL = `/frontend/src/assest/imgs/magic-school-imgs/${title}.png`;
-			imageURL = `../../assets/imgs/magic-school-imgs/${title}.png`;
+			imageURL = require(`../../../public/assets/imgs/magic-school-imgs/${title}.png`);
 			return title === spell.school.name;
 		} else if (title === spell.level.toString()) {
 			return title === spell.level.toString();
@@ -54,7 +52,7 @@ function SpellCard({ title, spells }) {
 
 	return (
 		<Card style={{ width: "18rem" }}>
-			<Card.Img variant="top" src={require(imageURL)} />
+			<Card.Img variant="top" src={imageURL.default} />
 			<Card.Body>
 				<Card.Title>{title}</Card.Title>
 				{/* <Button variant="primary" name={`button${title}`}>

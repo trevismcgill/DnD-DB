@@ -42,7 +42,6 @@ class App extends Component {
 						<Route exact path="/races/:id" component={Race} />
 						<Route exact path="/spells" component={SpellIndex} />
 						<Route exact path="/spells/:id" component={Spell} />
-						{/* <Route exact path="/spells/school/:id" component={SpellList} /> */}
 					</Switch>
 				</Router>
 			</div>

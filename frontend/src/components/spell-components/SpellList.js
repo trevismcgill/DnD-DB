@@ -9,7 +9,10 @@ function SpellList({ spells }) {
 			{spells.map((spell) => (
 				<Container>
 					<Row>
-						<Link to={`/spells/${spell.index.toLowerCase()}`}>
+						<Link
+							onClick={() => window.scrollTo(0, 0)}
+							to={`/spells/${spell.index.toLowerCase()}`}
+						>
 							{spell.name}
 						</Link>
 					</Row>

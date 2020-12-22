@@ -19,7 +19,6 @@ import Race from "./components/Race";
 import SpellIndex from "./containers/SpellIndex";
 import Spell from "./components/Spell";
 import "bootstrap/dist/css/bootstrap.css";
-// import SpellList from "./components/spell-components/SpellList";
 
 class App extends Component {
 	componentDidMount() {
@@ -28,6 +27,7 @@ class App extends Component {
 		this.props.getRaces();
 		this.props.getSpells();
 	}
+
 	render() {
 		return (
 			<div className="App">

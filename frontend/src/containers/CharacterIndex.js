@@ -1,9 +1,26 @@
-import React from 'react'
+import React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import Character from "../components/Character";
 
-export default function CharacterIndex() {
-    return (
-        <div>
-            
-        </div>
-    )
+function CharacterIndex({ characters }) {
+	return (
+		<div>
+			<button>
+				<Link to={"/characters/new"}>Create New Character</Link>
+			</button>
+			{characters.map((character) => (
+				<Character character={character} />
+			))}
+		</div>
+	);
 }
+
+const mapStateToProps = ({ characters }) => {
+	return {
+		characters: characters.all,
+	};
+};
+
+export default connect(mapStateToProps)(CharacterIndex);

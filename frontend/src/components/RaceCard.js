@@ -11,7 +11,7 @@ export default function RaceCard({ race }) {
 				<Card.Img variant="top" src={imageURL.default} />
 				<Card.Body>
 					<Card.Title>{race.name}</Card.Title>
-					<button>
+					<button onClick={() => window.scrollTo(0, 0)}>
 						<Link to={`/races/${race.name.toLowerCase()}`}>See More</Link>
 					</button>
 				</Card.Body>

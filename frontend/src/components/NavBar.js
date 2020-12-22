@@ -13,6 +13,11 @@ export default function Navbar() {
 				</Nav.Item>
 				<Nav.Item>
 					<Nav.Link>
+						<Link to="/characters">Characters</Link>
+					</Nav.Link>
+				</Nav.Item>
+				<Nav.Item>
+					<Nav.Link>
 						<Link to="/classes">Character Classes</Link>
 					</Nav.Link>
 				</Nav.Item>

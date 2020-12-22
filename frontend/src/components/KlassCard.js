@@ -11,7 +11,7 @@ export default function KlassCard({ klass }) {
 				<Card.Img variant="top" src={imageURL.default} />
 				<Card.Body>
 					<Card.Title>{klass.name}</Card.Title>
-					<button>
+					<button onClick={() => window.scrollTo(0, 0)}>
 						<Link to={`/classes/${klass.name.toLowerCase()}`}>See More</Link>
 					</button>
 				</Card.Body>

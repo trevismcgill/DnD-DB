@@ -9,6 +9,7 @@
 
 
 # def create_characterklass_models
+#     binding.pry
 #     base_url = "http://www.dnd5eapi.co"
 #     response = RestClient.get("#{base_url}/api/classes")
 #     dnd_klasses_hash = JSON.parse(response.body, symbolize_names:true)
@@ -53,7 +54,7 @@
 
 # ----------------------------------------------------------------------------------------
 
-# # create_characterklass_models
+# create_characterklass_models
 # create_spell_models
 # create_race_models
 

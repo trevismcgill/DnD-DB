@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2020_12_15_194529) do
   end
 
   create_table "characters", force: :cascade do |t|
+    t.integer "character_klass_id"
+    t.integer "race_id"
     t.string "name"
     t.integer "age"
     t.string "alignment"
@@ -37,6 +39,8 @@ ActiveRecord::Schema.define(version: 2020_12_15_194529) do
     t.integer "weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_klass_id"], name: "index_characters_on_character_klass_id"
+    t.index ["race_id"], name: "index_characters_on_race_id"
   end
 
   create_table "races", force: :cascade do |t|

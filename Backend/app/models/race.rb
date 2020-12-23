@@ -1,3 +1,3 @@
 class Race < ApplicationRecord
-    belongs_to :character
+    has_many :characters
 end

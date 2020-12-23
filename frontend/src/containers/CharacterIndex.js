@@ -7,7 +7,7 @@ import Character from "../components/Character";
 function CharacterIndex({ characters }) {
 	return (
 		<div>
-			<button>
+			<button onClick={() => window.scrollTo(0, 0)}>
 				<Link to={"/characters/new"}>Create New Character</Link>
 			</button>
 			{characters.map((character) => (

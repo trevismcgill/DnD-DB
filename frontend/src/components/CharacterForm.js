@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 class CharacterForm extends Component {
 	state = {
 		name: "",
-		class: "",
+		klass: "",
 		race: "",
 		age: "",
 		height: "",
@@ -44,11 +44,13 @@ class CharacterForm extends Component {
 									placeholder="name"
 								/>
 								<Form.Control
+									onChange={(e) => this.setState({ klass: e.target.value })}
 									type="text"
 									value={this.state.class}
 									placeholder="class"
 								/>
 								<Form.Control
+									onChange={(e) => this.setState({ race: e.target.value })}
 									type="text"
 									value={this.state.race}
 									placeholder="race"
@@ -56,21 +58,25 @@ class CharacterForm extends Component {
 							</Col>
 							<Col>
 								<Form.Control
+									onChange={(e) => this.setState({ age: e.target.value })}
 									type="text"
 									value={this.state.age}
 									placeholder="age"
 								/>
 								<Form.Control
+									onChange={(e) => this.setState({ height: e.target.value })}
 									type="text"
 									value={this.state.height}
 									placeholder="height"
 								/>
 								<Form.Control
+									onChange={(e) => this.setState({ weight: e.target.value })}
 									type="text"
 									value={this.state.weight}
 									placeholder="weight"
 								/>
 								<Form.Control
+									onChange={(e) => this.setState({ alignment: e.target.value })}
 									type="text"
 									value={this.state.alignment}
 									placeholder="alignment"

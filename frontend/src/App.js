@@ -11,6 +11,7 @@ import {
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import CharacterIndex from "./containers/CharacterIndex";
+import Character from "./components/Character";
 import CharacterForm from "./components/CharacterForm";
 import CharacterKlassIndex from "./containers/CharacterKlassIndex";
 import CharacterKlass from "./components/CharacterKlass";
@@ -36,6 +37,7 @@ class App extends Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/characters" component={CharacterIndex} />
+						<Route exact path="/characters/:id" component={Character} />
 						<Route exact path="/characters/new" component={CharacterForm} />
 						<Route exact path="/classes" component={CharacterKlassIndex} />
 						<Route exact path="/classes/:id" component={CharacterKlass} />

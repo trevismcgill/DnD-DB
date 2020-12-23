@@ -4,10 +4,10 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.references :character_klass
       t.references :race
       t.string :name
-      t.integer :age
+      t.string :age
       t.string :alignment
-      t.integer :height
-      t.integer :weight
+      t.string :height
+      t.string :weight
 
       t.timestamps
     end

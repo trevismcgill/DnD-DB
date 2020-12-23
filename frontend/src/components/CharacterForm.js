@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Image, Container, Row, Col } from "react-bootstrap";
+import { Form, Image, Container, Row, Col, Button } from "react-bootstrap";
 import { createCharacter } from "../redux/actions/characterActions";
 import { connect } from "react-redux";
 import CharacterSheet from "../imgs/CharacterSheet.png";
@@ -7,25 +7,19 @@ import "bootstrap/dist/css/bootstrap.css";
 class CharacterForm extends Component {
 	state = {
 		name: "",
-		klass: "",
+		character_klass: "",
 		race: "",
 		age: "",
 		height: "",
 		weight: "",
 		alignment: "",
-		ability_scores: {
-			STR: "",
-			DEX: "",
-			CON: "",
-			INT: "",
-			WIS: "",
-			CHA: "",
-		},
 	};
 
 	submit = (e) => {
 		e.preventDefault();
-		createCharacter();
+		this.props.createCharacter(this.state);
+
+		this.props.history.push("/characters");
 	};
 
 	render() {
@@ -44,9 +38,11 @@ class CharacterForm extends Component {
 									placeholder="name"
 								/>
 								<Form.Control
-									onChange={(e) => this.setState({ klass: e.target.value })}
+									onChange={(e) =>
+										this.setState({ character_klass: e.target.value })
+									}
 									type="text"
-									value={this.state.class}
+									value={this.state.character_klass}
 									placeholder="class"
 								/>
 								<Form.Control
@@ -55,8 +51,6 @@ class CharacterForm extends Component {
 									value={this.state.race}
 									placeholder="race"
 								/>
-							</Col>
-							<Col>
 								<Form.Control
 									onChange={(e) => this.setState({ age: e.target.value })}
 									type="text"
@@ -81,7 +75,7 @@ class CharacterForm extends Component {
 									value={this.state.alignment}
 									placeholder="alignment"
 								/>
-								<Form.Control type="submit" />
+								<Button type="submit">Submit</Button>
 							</Col>
 						</Row>
 					</Form>

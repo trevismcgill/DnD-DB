@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 2020_12_15_194529) do
     t.integer "character_klass_id"
     t.integer "race_id"
     t.string "name"
-    t.integer "age"
+    t.string "age"
     t.string "alignment"
-    t.integer "height"
-    t.integer "weight"
+    t.string "height"
+    t.string "weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["character_klass_id"], name: "index_characters_on_character_klass_id"

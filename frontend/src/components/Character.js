@@ -10,13 +10,14 @@ class Character extends Component {
 	render() {
 		return (
 			<div>
-				<h1>{this.props.character.name}</h1>
-				<h2>{this.props.klass.name}</h2>
-				<h2>{this.props.race.name}</h2>
-				<h3>Age: {this.props.character.age}</h3>
-				<h3>Weight: {this.props.character.weight}</h3>
-				<h3>Height: {this.props.character.height}</h3>
-				<h3>Alignment: {this.props.character.alignment}</h3>
+				<h1>
+					{this.props.character.name} the {this.props.race.name}{" "}
+					{this.props.klass.name}
+				</h1>
+				<p>Age: {this.props.character.age}</p>
+				<p>Weight: {this.props.character.weight} lbs.</p>
+				<p>Height: {this.props.character.height} in.</p>
+				<p>Alignment: {this.props.character.alignment}</p>
 				<button onClick={this.dltClick}>Delete</button>
 			</div>
 		);

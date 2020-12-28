@@ -20,17 +20,7 @@ function SpellCard({ title, spells }) {
 		} else if (klassExists) {
 			return klassPresent;
 		}
-		//      return title === spell.classes.find((class) => {
-		//         return title === class.name
-		//      }))
-		// )
 	});
-
-	// spells.map((spell, index) => {
-	// 	if (spell.classes.some(klassPresent)) {
-	// 		return spell.classes[index];
-	// 	}
-	// });
 
 	return (
 		<Card style={{ width: "18rem" }}>

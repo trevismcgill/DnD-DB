@@ -37,8 +37,8 @@ class App extends Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/characters" component={CharacterIndex} />
-						<Route exact path="/characters/:id" component={Character} />
 						<Route exact path="/characters/new" component={CharacterForm} />
+						<Route exact path="/characters/:id" component={Character} />
 						<Route exact path="/classes" component={CharacterKlassIndex} />
 						<Route exact path="/classes/:id" component={CharacterKlass} />
 						<Route exact path="/races" component={RaceIndex} />

@@ -17,9 +17,7 @@ class CharacterForm extends Component {
 
 	submit = (e) => {
 		e.preventDefault();
-		this.props.createCharacter(this.state);
-
-		this.props.history.push("/characters");
+		this.props.createCharacter(this.state, this.props.history);
 	};
 
 	render() {

@@ -10,7 +10,6 @@ class CharactersController < ApplicationController
 
     def create
         character = Character.new(character_params)
-        binding.pry
         character_race = Race.find_by(index: params[:character][:race].downcase)
         character_klass = CharacterKlass.find_by(index: params[:character][:character_klass].downcase)
         character.race_id = character_race.id
@@ -18,6 +17,12 @@ class CharactersController < ApplicationController
         if character.save
             render json: character
         end
+    end
+
+    def destroy
+        character = Character.find_by_id(params[:character][:id])
+        render :json => character
+        character.destroy
     end
 
     private

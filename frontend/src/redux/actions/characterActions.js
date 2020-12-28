@@ -1,4 +1,4 @@
-export const createCharacter = (data) => {
+export const createCharacter = (data, history) => {
 	return (dispatch) => {
 		fetch(`http://localhost:3001/characters`, {
 			method: "POST",
@@ -8,13 +8,13 @@ export const createCharacter = (data) => {
 			body: JSON.stringify({ character: data }),
 		})
 			.then((resp) => resp.json())
-			.then((character) =>
-				dispatch({ type: "CREATE_CHARACTER", payload: character })
-			);
+			.then((character) => {
+				dispatch({ type: "CREATE_CHARACTER", payload: character });
+			}, history.push("/characters"));
 	};
 };
 
-export const deleteCharacter = (data) => {
+export const deleteCharacter = (data, history) => {
 	return (dispatch) => {
 		fetch(`http://localhost:3001/characters/${data.id}`, {
 			method: "DELETE",
@@ -25,8 +25,10 @@ export const deleteCharacter = (data) => {
 			body: JSON.stringify({ character: data }),
 		})
 			.then((resp) => resp.json())
-			.then((character) =>
-				dispatch({ type: "DELETE_CHARACTER", payload: character })
+			.then(
+				(character) =>
+					dispatch({ type: "DELETE_CHARACTER", payload: character }),
+				history.push("/characters")
 			);
 	};
 };

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import KlassCard from "../components/KlassCard";
 class CharacterKlassIndex extends Component {

@@ -18,6 +18,8 @@ class CharacterForm extends Component {
 	submit = (e) => {
 		e.preventDefault();
 		this.props.createCharacter(this.state, this.props.history);
+		// this.props.dispatch(createCharacter(this.state, this.props.history));
+		// createCharacter(this.state, this.props.history)(this.props.dispatch);
 	};
 
 	render() {
@@ -82,5 +84,13 @@ class CharacterForm extends Component {
 		);
 	}
 }
+
+// const mapDispatchToProps = (dispatch) => {
+// 	return {
+// 		createCharacter: (a, b) => {
+// 			dispatch(createCharacter(a, b));
+// 		},
+// 	};
+// };
 
 export default connect(null, { createCharacter })(CharacterForm);

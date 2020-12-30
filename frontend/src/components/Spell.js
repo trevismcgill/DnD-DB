@@ -142,21 +142,6 @@ function Spell({ spell }) {
 	);
 }
 
-//
-// const mapStateToProps = ({ spells }) => {
-// 	const spellsRe = /spells\/(.+)$/gu;
-// 	const currentSpell = spellsRe.exec(
-// 		decodeURIComponent(window.location.pathname)
-// 	)[1];
-// 	debugger;
-// 	const spell = spells.all.find((spell) => {
-// 		return spell.name.toLowerCase() === currentSpell;
-// 	});
-// 	return {
-// 		spell,
-// 	};
-// };
-
 const mapStateToProps = ({ spells }) => {
 	const spell = spells.all.find((spell) => {
 		return (

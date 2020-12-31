@@ -4,22 +4,23 @@ import { deleteCharacter } from "../redux/actions/characterActions";
 
 class Character extends Component {
 	dltClick = (e) => {
-		this.props.deleteCharacter(this.props.character, this.props.history);
+		const { deleteCharacter, character, history } = this.props;
+		deleteCharacter(character, history);
 	};
 
 	render() {
+		const { character, klass, race } = this.props;
 		return (
 			<>
-				{this.props.character && this.props.klass && this.props.race ? (
+				{character && klass && race ? (
 					<div>
 						<h1>
-							{this.props.character.name} the {this.props.race.name}{" "}
-							{this.props.klass.name}
+							{character.name} the {race.name} {klass.name}
 						</h1>
-						<p>Age: {this.props.character.age}</p>
-						<p>Weight: {this.props.character.weight} lbs.</p>
-						<p>Height: {this.props.character.height} in.</p>
-						<p>Alignment: {this.props.character.alignment}</p>
+						<p>Age: {character.age}</p>
+						<p>Weight: {character.weight} lbs.</p>
+						<p>Height: {character.height} in.</p>
+						<p>Alignment: {character.alignment}</p>
 						<button onClick={this.dltClick}>Delete</button>
 					</div>
 				) : null}

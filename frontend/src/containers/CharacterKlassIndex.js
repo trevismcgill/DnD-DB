@@ -23,7 +23,7 @@ class CharacterKlassIndex extends Component {
 				<Container>
 					<Row md={4}>
 						{this.props.klasses.map((klass) =>
-							klass.index.includes(this.state.search) ? (
+							klass.index.includes(this.state.search.toLowerCase()) ? (
 								<KlassCard klass={klass} />
 							) : null
 						)}

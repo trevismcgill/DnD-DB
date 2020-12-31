@@ -19,6 +19,8 @@ function SpellCard({ title, spells }) {
 			return title === spell.level.toString();
 		} else if (klassExists) {
 			return klassPresent;
+		} else {
+			return null;
 		}
 	});
 

@@ -13,7 +13,7 @@ class CharacterKlassIndex extends Component {
 				<input
 					type="search"
 					onChange={(e) =>
-						this.setState(({ search }) => ({
+						this.setState(() => ({
 							search: e.target.value,
 						}))
 					}

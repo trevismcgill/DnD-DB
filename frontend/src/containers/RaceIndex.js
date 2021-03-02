@@ -8,6 +8,8 @@ class RaceIndex extends Component {
 		search: "",
 	};
 	render() {
+		//Lines 15-24 contain fuzzy search code
+
 		return (
 			<div>
 				<h1>Races</h1>

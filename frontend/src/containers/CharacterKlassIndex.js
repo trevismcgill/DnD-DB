@@ -18,7 +18,7 @@ class CharacterKlassIndex extends Component {
 						}))
 					}
 					value={this.state.search}
-					placeholder="search Classes"
+					placeholder="search classes"
 				/>
 				<Container>
 					<Row md={4}>

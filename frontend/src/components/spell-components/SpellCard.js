@@ -26,7 +26,7 @@ function SpellCard({ title, spells }) {
 
 	return (
 		<Card style={{ width: "18rem" }}>
-			{imageURL !=
+			{imageURL !==
 			"https://media-waterdeep.cursecdn.com/avatars/thumbnails/6/342/420/618/636272680339895080.png" ? (
 				<Card.Img variant="top" src={imageURL.default} />
 			) : null}

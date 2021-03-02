@@ -6,7 +6,10 @@ class CharacterKlassIndex extends Component {
 	state = {
 		search: "",
 	};
+
 	render() {
+		//Lines 16-25 contain fuzzy search code
+
 		return (
 			<div>
 				<h1>Character Class Index</h1>
